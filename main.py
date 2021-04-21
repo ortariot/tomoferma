@@ -30,7 +30,15 @@ class Animal():
         print(f"I'am {self.name}, I'am eat {food}")
     
     def say(self):
-        print(f"I' am {self.name}")
+        print(f"I'm {self.name}, I say {self.voice[self.kind]} ")
+
+    voice = {"gose" : "Ga-ga-ga", 
+            "chicken" : "Ko-ko-ko", 
+            "duck" : "Krja-Krja", 
+            "cow" : "Muuuuu", 
+            "sheep" : "Be-be-be", 
+            "goat" : "Me-me-me" 
+            }
 
 class Bird(Animal):
     def get_edge(self):
@@ -43,6 +51,7 @@ def main():
     dog.eat("meat")
     ko_ko = Bird("Ko-Ko", "chicken")
     print(f"{ko_ko.name} lsid {ko_ko.get_edge()} edges")
+    ko_ko.say()
 
 
 main()
