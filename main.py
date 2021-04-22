@@ -44,6 +44,14 @@ class Bird(Animal):
     def get_edge(self):
         return randint(0,4)
 
+class Milk_Giving(Animal):
+    def get_milk(self):
+        return randint(0, 15) if self.kind is "cow" else randint(0, 8)
+
+class Wool_Giving(Animal):
+    def get_wool(self):
+        return randint(0, 3)
+
 
 
 def main():
@@ -52,6 +60,9 @@ def main():
     ko_ko = Bird("Ko-Ko", "chicken")
     print(f"{ko_ko.name} lsid {ko_ko.get_edge()} edges")
     ko_ko.say()
-
+    mu_mu = Milk_Giving("Mu-mu", "cow")
+    print(f"{mu_mu.name} lsid {mu_mu.get_milk()} litrs milk")
+    kozlina = Milk_Giving("Kozlina", "goat")
+    print(f"{kozlina.name} lsid {kozlina.get_milk()} litrs milk")
 
 main()
